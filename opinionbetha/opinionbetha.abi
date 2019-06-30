@@ -1,0 +1,507 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "Court",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "funds",
+                    "type": "uint64"
+                },
+                {
+                    "name": "numJudges",
+                    "type": "uint64"
+                },
+                {
+                    "name": "maxJudges",
+                    "type": "uint64"
+                },
+                {
+                    "name": "verdict",
+                    "type": "uint64"
+                },
+                {
+                    "name": "totalVerdicts",
+                    "type": "uint64"
+                },
+                {
+                    "name": "resolved",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "Option",
+            "base": "",
+            "fields": [
+                {
+                    "name": "optionId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "voters",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "judges",
+                    "type": "uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "Poll",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "pollName",
+                    "type": "string"
+                },
+                {
+                    "name": "eventType",
+                    "type": "string"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "funds",
+                    "type": "uint64"
+                },
+                {
+                    "name": "totalVotes",
+                    "type": "uint64"
+                },
+                {
+                    "name": "maxUsers",
+                    "type": "uint64"
+                },
+                {
+                    "name": "isFinished",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "base": "",
+            "fields": [
+                {
+                    "name": "userId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "balance",
+                    "type": "uint64"
+                },
+                {
+                    "name": "frozen",
+                    "type": "uint64"
+                },
+                {
+                    "name": "voted",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "courtlist",
+                    "type": "uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "addcourt",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "maxJudges",
+                    "type": "uint64"
+                },
+                {
+                    "name": "funds",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "addjudge",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "userId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "addpoll",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "pollName",
+                    "type": "string"
+                },
+                {
+                    "name": "funds",
+                    "type": "uint64"
+                },
+                {
+                    "name": "ownerId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "attachoption",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "optionId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "deletejudge",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "userId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "illegalmint",
+            "base": "",
+            "fields": [
+                {
+                    "name": "userId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "value",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "judgevote",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "userId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "optionId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "mintost",
+            "base": "",
+            "fields": [
+                {
+                    "name": "userId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "value",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "multi",
+            "base": "",
+            "fields": [
+                {
+                    "name": "to_list",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "foreach",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "refund",
+            "base": "",
+            "fields": [
+                {
+                    "name": "userId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "resolve",
+            "base": "",
+            "fields": [
+                {
+                    "name": "courtId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "safetransfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "userId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "value",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setfinished",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "setlimit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "maxUsers",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "toforecast",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "uint64"
+                },
+                {
+                    "name": "to",
+                    "type": "uint64"
+                },
+                {
+                    "name": "value",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "userauth",
+            "base": "",
+            "fields": [
+                {
+                    "name": "userId",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "uservote",
+            "base": "",
+            "fields": [
+                {
+                    "name": "pollId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "userId",
+                    "type": "uint64"
+                },
+                {
+                    "name": "optionId",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addcourt",
+            "type": "addcourt",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addjudge",
+            "type": "addjudge",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addpoll",
+            "type": "addpoll",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "attachoption",
+            "type": "attachoption",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "deletejudge",
+            "type": "deletejudge",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "illegalmint",
+            "type": "illegalmint",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "judgevote",
+            "type": "judgevote",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "mintost",
+            "type": "mintost",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "multi",
+            "type": "multi",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "refund",
+            "type": "refund",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "resolve",
+            "type": "resolve",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "safetransfer",
+            "type": "safetransfer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setfinished",
+            "type": "setfinished",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setlimit",
+            "type": "setlimit",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "toforecast",
+            "type": "toforecast",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "userauth",
+            "type": "userauth",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "uservote",
+            "type": "uservote",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "courts",
+            "type": "Court",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "options",
+            "type": "Option",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "polls",
+            "type": "Poll",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        },
+        {
+            "name": "users",
+            "type": "User",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}
